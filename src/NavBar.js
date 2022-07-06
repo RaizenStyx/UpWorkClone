@@ -4,6 +4,8 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
+
 import {
   SECONDARY_NAVY,
   Search,
@@ -35,8 +37,12 @@ export default function NavBar() {
             />
           </Search>
           <Box sx={{ display: "flex" }}>
-            <Button color="inherit">Find a Job</Button>
-            <Button color="inherit">Login</Button>
+            <Link to="/jobs" style={{ color: "white", textDecoration: "none" }}>
+              <Button color="inherit">Find a Job</Button>
+            </Link>
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              <Button color="inherit">Login</Button>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>

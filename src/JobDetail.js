@@ -8,6 +8,7 @@ import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import TextField from "@mui/material/TextField";
+import Link from "@mui/material/Link";
 
 import {
   MainBody,
@@ -78,7 +79,14 @@ export default function JobDetail({ allJobs }) {
 
           <Divider />
         </Box>
-        <Box sx={{ background: "white", width: "35%", borderRadius: "5px" }}>
+        <Box
+          sx={{
+            background: "white",
+            width: "35%",
+            borderRadius: "5px",
+            height: "400px"
+          }}
+        >
           <JobDetailBox>
             <PrimaryButton
               sx={{
@@ -150,10 +158,23 @@ export default function JobDetail({ allJobs }) {
             </Typography>
             <TextField
               disabled
-              id="filled-disabled"
-              defaultValue="Joblink:"
-              variant="filled"
+              id="disabled"
+              defaultValue="https://job-url.com"
+              variant="standard"
             />
+            <Link
+              href="#"
+              sx={{
+                textDecoration: "none",
+                fontWeight: 600,
+                display: "block",
+                fontSize: "12px",
+                marginTop: "15px"
+              }}
+              color={PRIMARY_GREEN}
+            >
+              Copy Link
+            </Link>
           </JobDetailBox>
         </Box>
       </MainBody>

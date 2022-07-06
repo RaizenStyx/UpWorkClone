@@ -1,5 +1,5 @@
 import "./styles.css";
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Login from "./Login";
 import JobBoard from "./JobBoard";
 import JobDetail from "./JobDetail";
