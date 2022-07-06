@@ -11,12 +11,21 @@ export const MainBody = styled(Box)(() => ({
   padding: "50px 10%",
   height: "500px",
   display: "flex",
-  textAlign: "left"
+  textAlign: "left",
+  justifyContent: "space-between"
 }));
 
 export const PrimaryButton = styled(Button)(() => ({
   background: PRIMARY_GREEN,
-  borderRadius: "30px"
+  borderRadius: "30px",
+  color: "white"
+}));
+
+export const SecondButton = styled(Button)(() => ({
+  background: "none",
+  borderRadius: "30px",
+  color: PRIMARY_GREEN,
+  border: `1px solid ${PRIMARY_GREEN}`
 }));
 
 export const LoginBox = styled(Box)(() => ({
@@ -25,6 +34,10 @@ export const LoginBox = styled(Box)(() => ({
   width: "500px",
   padding: "40px",
   boxSizing: "border-box"
+}));
+
+export const JobDetailBox = styled(Box)(() => ({
+  padding: "20px"
 }));
 
 export const LoginContainer = styled(Box)(() => ({
