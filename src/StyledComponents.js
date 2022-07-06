@@ -7,6 +7,13 @@ import InputBase from "@mui/material/InputBase";
 export const PRIMARY_GREEN = "#39B54A";
 export const SECONDARY_NAVY = "#2B5468";
 
+export const MainBody = styled(Box)(() => ({
+  padding: "50px 10%",
+  height: "500px",
+  display: "flex",
+  textAlign: "left"
+}));
+
 export const PrimaryButton = styled(Button)(() => ({
   background: PRIMARY_GREEN,
   borderRadius: "30px"

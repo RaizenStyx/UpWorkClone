@@ -6,6 +6,7 @@ import NavBar from "./NavBar";
 import CatMenu from "./CatMenu";
 import BodySearch from "./BodySearch";
 import JobList from "./JobList";
+import { MainBody } from "./StyledComponents";
 
 export default function JobBoard({ allJobs }) {
   const [selectedCat, setSelectedCat] = useState("");
@@ -20,14 +21,7 @@ export default function JobBoard({ allJobs }) {
   return (
     <>
       <NavBar />
-      <Box
-        sx={{
-          padding: "50px 10%",
-          height: "500px",
-          display: "flex",
-          textAlign: "left"
-        }}
-      >
+      <MainBody>
         <Box sx={{ width: "30%" }}>
           <Typography
             variant="h5"
@@ -51,10 +45,15 @@ export default function JobBoard({ allJobs }) {
         <Box sx={{ width: "70%" }}>
           <BodySearch />
           <JobList
-            jobs={allJobs.filter((job) => job.category === selectedCat)}
+            jobs={allJobs.filter((job) => {
+              if (!selectedCat) {
+                return true;
+              }
+              return job.category === selectedCat;
+            })}
           />
         </Box>
-      </Box>
+      </MainBody>
     </>
   );
 }
