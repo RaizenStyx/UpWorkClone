@@ -1,2 +1,2 @@
-# UpWorkClone
+# JobApp
 Created with CodeSandbox
